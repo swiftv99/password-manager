@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block main %}
-    <div class="m-auto">
-        <form action="/register" method="post">
+    <div class="vstack">
+        <form action="/register" method="post" class="border rounded m-auto p-5" style="border: #ccc;">
             <div class="mb-3">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
             </div>
@@ -16,9 +16,10 @@
             <div class="mb-3">
                 <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
             </div>
-            <button class="btn btn-primary px-5" type="submit">Register</button>
+            <div class="d-grid">
+                <button class="btn btn-primary px-5" type="submit">Register</button>
+            </div>
         </form>
-    
-        <p class="mt-4"><strong>ATTENTION: Password must have at least 8 characters, one uppercase letter, one lowercase letter, one digit, and one symbol.</strong></p>
+        <p class=""><strong>ATTENTION: Password must have at least 8 characters, one uppercase letter, one lowercase letter, one digit, and one symbol.</strong></p>
     </div>
 {% endblock %}
